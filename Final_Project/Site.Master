@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final_Project.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <asp:PlaceHolder runat="server">     
+          <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="Content/normalize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/skeleton.css">
+    <link href="Content/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
+            <%--Framework Scripts--%>
+            
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site Scripts--%>
+
+        </Scripts>
+    </asp:ScriptManager>
+
+      <div id="container">
+        
+        <div id="header">
+
+          <span runat="server" id="WelcomeMessage"></span>
+
+        </div>
+
+        <div runat="server" id="sidebar">
+          <ul id="sidebarUL" runat="server">
+            <li id="li1" runat="server"><a href="start.aspx">Book Travel</a></li>
+            <li id="li2" runat="server"><a href="profile.aspx">My Profile</a></li>
+            <li id="li3" runat="server"><a href="recent_searches.aspx">Recent Searches</a></li>
+            <li id="li4" runat="server"><a href="pending_trips.aspx">Pending Trips</a></li>
+            <li id="li5" runat="server"><a href="reports.aspx">Past Trips</a></li>
+            <li id="li6" runat="server" style="display:none;"><a runat="server" id="btnBookAnother" href="start.aspx" onserverclick="btnBookAnother_ServerClick">Book for Another</a></li>
+            <li id="li7" runat="server"><asp:CheckBox ID="cbLanguageChange" runat="server" CssClass="masterLanguageChange" Text=" Tiếng Việt" AutoPostBack="true" OnCheckedChanged="languageChange_OnCheckedChange" /> </li>
+            <li id="li8" runat="server"><a><asp:Button ID="btnLogOut" CssClass="button button-primary" runat="server" Text="Log Out" OnClick="btnLogOut_Click" /></a></li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="vertSpace">
+    
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+          
+          </div>
+        </div>
+
+        <div class="footer">
+
+          <span>For assistance, please call 1-800-KPMG-HELP</span>
+
+        </div>
+
+      </div>
+    
+    </form>
+</body>
+</html>

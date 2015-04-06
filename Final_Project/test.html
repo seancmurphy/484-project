@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link type="text/css" href="Content/normalize.css" rel="stylesheet">
+    <link type="text/css" href="Content/skeleton.css" rel="stylesheet">
+    <link type="text/css" href="Content/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+  
+    <form>
+    
+      <div id="container">
+        
+        <div class="header"></div>
+
+        <div id="sidebar">
+          <ul>
+            <li><a href="#">Book Travel</a></li>
+            <li><a href="#">Profile Page</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Pending Trips</a></li>
+            <li><a href="#">Past Trips</a></li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="vertSpace">
+    
+            <h2 id="startHeading">What would you like to book today?</h2>
+            <br />
+            <br />
+            <div class="center">
+              <table>
+                <tr>
+                 <td><label>Flight <input type="checkbox" ID="FlightCheckBox" class="bookingSelect" runat="server" /></label></td>
+                 <td><label>Hotel <input type="checkbox" ID="HotelCheckBox" class="bookingSelect" runat="server" /></label></td>
+                 <td><label>Car <input type="checkbox" ID="CarCheckBox" class="bookingSelect" runat="server" /></label></td>
+                </tr>
+              </table>
+
+              <br /><br />
+
+              <div class="center" runat="server" id="searchWarning"></div>
+
+              <input type="button" ID="btnSelect" class="button" runat="server" Value="Next" OnClick="btnSelect_Click" />
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="footer">
+
+          <span>For assistance, please call 1-800-KPMG-HELP</span>
+
+        </div>
+
+      </div>
+    
+    </form>
+  
+  </body>
+
+</html>
