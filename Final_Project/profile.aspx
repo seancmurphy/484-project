@@ -2,7 +2,7 @@
 
 <asp:Content runat="server" ID="editProfileContent" ContentPlaceHolderID="MainContent">
       
-      <span class="pageHeading" runat="server" id="notify" style="display:none;"></span>
+      <div class="pageHeading" runat="server" id="notify" style="display:none;"></div>
 
       <table>
         <tr>
