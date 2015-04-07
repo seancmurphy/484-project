@@ -10,7 +10,7 @@
     <tr>
       <td>
         <asp:TextBox ID="tbDepartureDate" runat="server" placeholder="Departure Date DD/MM/YY" /><a runat="server" id="A1" onserverclick="calendar1_Click">  <i class="fa fa-calendar black"></i></a>
-        <asp:Calendar ID="Calendar1" runat="server" TitleStyle-VerticalAlign="Middle" TitleStyle-HorizontalAlign="Center" Width="250px" Height="250px" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
+        <asp:Calendar ID="Calendar1" runat="server" TitleStyle-VerticalAlign="Middle" TitleStyle-HorizontalAlign="Center" Width="250px" Height="250px" Visible="false" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
       </td>
       <td>
         <asp:TextBox ID="tbArrivalDate" runat="server" placeholder="Arrival Date DD/MM/YY" /><a runat="server" id="showCalendar2" onserverclick="calendar2_Click">  <i class="fa fa-calendar black"></i></a>

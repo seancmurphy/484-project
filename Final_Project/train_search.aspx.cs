@@ -21,31 +21,41 @@ namespace Final_Project
       string To = ddlTo.Text;
       GridView1.Visible = true;
       GridView2.Visible = true;
-      DateTime todate = CalendarTO.SelectedDate;
-      DateTime fromdate = CalReturn.SelectedDate;
+      DateTime todate = DateTime.Parse(tbDepartureDate.Text);
+      DateTime fromdate = DateTime.Parse(tbReturnDate.Text);
 
       try
       {
         
         if (From == To)
         {
+          lblError.Visible = true;
           lblError.Text = "Please select two different cities to travel between.";
-
         }
-        else if (todate > fromdate)
+        else
         {
+          lblError.Visible = false;
+        }
+        
+        if (todate > fromdate)
+        {
+          lblCalError.Visible = true;
           lblCalError.Text = "Please select a return date that is after your departure date.";
         }
         else if (todate.Equals("1/1/0001 12:00:00 AM"))
         {
+          lblCalError.Visible = true;
           lblCalError.Text = "Please select a departure date.";
         }
         else if (fromdate.Equals("1/1/0001 12:00:00 AM"))
         {
+          lblCalError.Visible = true;
           lblCalError.Text = "Please select a return date.";
         }
         else
         {
+          lblError.Visible = false;
+          lblCalError.Visible = false;
           lblError.Text = "";
           lblCalError.Text = "";
           System.Data.SqlClient.SqlConnection sc1 = new System.Data.SqlClient.SqlConnection();
@@ -177,6 +187,42 @@ namespace Final_Project
     protected void Button2_Click(object sender, EventArgs e)
     {
       NewMessage.SendConfirmationMessage("bander@dukes.jmu.edu", "Reserve Trip", "regular");
+    }
+
+    protected void calendar1_Click(object sender, EventArgs e)
+    {
+      if (Calendar1.Visible == false)
+      {
+        Calendar1.Visible = true;
+      }
+      else
+      {
+        Calendar1.Visible = false;
+      }
+    }
+
+    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+    {
+      tbDepartureDate.Text = Calendar1.SelectedDate.ToShortDateString();
+      Calendar1.Visible = false;
+    }
+
+    protected void calendar2_Click(object sender, EventArgs e)
+    {
+      if (Calendar2.Visible == false)
+      {
+        Calendar2.Visible = true;
+      }
+      else
+      {
+        Calendar2.Visible = false;
+      }
+    }
+
+    protected void calendar2_SelectionChanged(object sender, EventArgs e)
+    {
+      tbReturnDate.Text = Calendar2.SelectedDate.ToShortDateString();
+      Calendar2.Visible = false;
     }
   }
 }

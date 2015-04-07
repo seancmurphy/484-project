@@ -67,40 +67,31 @@ namespace Final_Project {
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// Label3 control.
+        /// tbReturnDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.TextBox tbReturnDate;
         
         /// <summary>
-        /// CalendarTO control.
+        /// showCalendar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalendarTO;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor showCalendar2;
         
         /// <summary>
-        /// Label11 control.
+        /// Calendar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
-        
-        /// <summary>
-        /// CalReturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalReturn;
+        protected global::System.Web.UI.WebControls.Calendar Calendar2;
         
         /// <summary>
         /// lblCalError control.
@@ -119,6 +110,15 @@ namespace Final_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// tableTrainResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tableTrainResults;
         
         /// <summary>
         /// Panel2 control.
