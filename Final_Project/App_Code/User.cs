@@ -11,6 +11,7 @@ namespace Final_Project
     private string firstName;
     private string lastName;
     private string userType;
+    private string userEmail;
     private int empID;
     private bool isVietnamese;
 
@@ -24,7 +25,7 @@ namespace Final_Project
       isVietnamese = false;
     }
 
-    public Person(string FirstName, string LastName, string UserType,
+    public void Person(string FirstName, string LastName, string UserType,
                   int EmpID, bool IsVietnamese)
     {
       firstName = FirstName;
@@ -60,6 +61,11 @@ namespace Final_Project
       return isVietnamese;
     }
 
+    public string getUserEmail()
+    {
+      return userEmail;
+    }
+
     // Set Methods
     public void setFirstName(string FirstName)
     {
@@ -84,6 +90,11 @@ namespace Final_Project
     public void setIsVietnamese(bool IsVietnamese)
     {
       isVietnamese = IsVietnamese;
+    }
+
+    public void setUserEmail(string newEmail)
+    {
+      userEmail = newEmail;
     }
   }
 }

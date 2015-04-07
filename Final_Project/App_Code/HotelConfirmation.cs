@@ -7,5 +7,13 @@ namespace Final_Project
 {
   public class HotelConfirmation
   {
+    // Attributes
+    private string hotelConfNum;
+
+    // Set Methods
+    public void setHotelConfNum(string newConfNum)
+    {
+      hotelConfNum = newConfNum;
+    }
   }
 }

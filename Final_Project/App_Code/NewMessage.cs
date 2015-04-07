@@ -76,22 +76,7 @@ namespace Final_Project
     {
       empID = Convert.ToString(EmpID);
     }
-    
-    ////// Flight Set Methods
-    
-    
-    ////// Hotel Set Methods
-    public void setHotelConfNum(string newConfNum)
-    {
-      hotelConfNum = newConfNum;
-    }
-    
-    ////// Car Set Methods
-    public void setCarConfNum(string newConfNum)
-    {
-      CarConfNum = newConfNum;
-    }
-    
+
     //// Conf Messages
     
     static public void createTrainConfirmationMessage()

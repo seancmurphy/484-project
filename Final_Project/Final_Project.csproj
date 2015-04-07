@@ -128,7 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -141,7 +140,6 @@
     <Content Include="reports.aspx" />
     <Content Include="recent_searches.aspx" />
     <Content Include="start.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\main.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\skeleton.css" />
@@ -216,15 +214,10 @@
     <Content Include="App_Code\TrainConfirmation.cs" />
     <Content Include="App_Code\HotelConfirmation.cs" />
     <Content Include="App_Code\CarConfirmation.cs" />
+    <Content Include="App_Code\CurrencyRate.cs" />
+    <Compile Include="App_Code\Train.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,13 +302,6 @@
     </Compile>
     <Compile Include="start.aspx.designer.cs">
       <DependentUpon>start.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>

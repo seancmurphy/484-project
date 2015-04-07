@@ -60,17 +60,17 @@
         <tr>
           <td>Preferred Airline:</td>
           <td><asp:TextBox ID="tbPrefAirline" runat="server" placeholder="Preferred Airline" /></td>
-          <td><asp:TextBox ID="tbAirlineRewards" runat="server" placeholder="Rewards Number" /></td>
+          <td><asp:TextBox ID="tbAirlineRewards" runat="server" placeholder="Rewards Number" OnTextChanged="tbAirlineRewards_TextChanged" /></td>
         </tr>
         <tr>
           <td>Preferred Hotel Provider:</td>
           <td><asp:TextBox ID="tbPrefHotel" runat="server" placeholder="Preferred Hotel Chain" /></td>
-          <td><asp:TextBox ID="tbHotelRewards" runat="server" placeholder="Rewards Number" /></td>
+          <td><asp:TextBox ID="tbHotelRewards" runat="server" placeholder="Rewards Number" OnTextChanged="tbHotelRewards_TextChanged" /></td>
         </tr>
         <tr>
           <td>Preferred Car Service:</td>
           <td><asp:TextBox ID="tbPrefCar" runat="server" placeholder="Preferred Car Service" /></td>
-          <td><asp:TextBox ID="tbCarRewards" runat="server" placeholder="Rewards Number" /></td>
+          <td><asp:TextBox ID="tbCarRewards" runat="server" placeholder="Rewards Number" OnTextChanged="tbCarRewards_TextChanged" /></td>
         </tr>
       </table>
 

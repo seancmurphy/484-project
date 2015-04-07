@@ -10,7 +10,6 @@ using System.Configuration;
 using System.Text;
 using System.Net;
 using System.Net.Mail;
-using System.Data;
 
 namespace Final_Project
 {
@@ -18,9 +17,15 @@ namespace Final_Project
   {
     protected void Page_Load(object sender, EventArgs e)
     {
+      // Preference text boxes
+      if (tbAirlineRewards.Text != null)
+      {
+        
+      }
+      
+      // Emily's Stuff
       try
       {
-
         for (var i = 1; i < 13; i++)
         {
           var item = new ListItem
@@ -41,10 +46,8 @@ namespace Final_Project
           DDLYear.Items.Add(item);
         }
 
-
         if (!IsPostBack)
         {
-
           System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
           sc.ConnectionString = @"Server = Localhost; Database=KPMG; Trusted_Connection=Yes";
           sc.Open();
@@ -67,7 +70,6 @@ namespace Final_Project
           System.Data.SqlClient.SqlDataReader reader;
           reader = fill.ExecuteReader();
 
-
           if (reader.HasRows)
           {
             reader.Read();
@@ -89,15 +91,11 @@ namespace Final_Project
           {
             notify.InnerHtml = "User cannot be found in the database.";
           }
-
         }
-
         else
         {
 
         }
-
-
       }
       catch
       {
@@ -109,7 +107,6 @@ namespace Final_Project
     {
       try
       {
-
         //reconnect to database
         System.Data.SqlClient.SqlConnection save_connection = new System.Data.SqlClient.SqlConnection();
         save_connection.ConnectionString = @"Server = Localhost; Database=KPMG; Trusted_Connection=Yes";
@@ -122,7 +119,6 @@ namespace Final_Project
         //  String firstname = txtFirst.Text;
         //  String lastname = txtLast.Text;
 
-
         //Preventing SQl injection
         update.Parameters.AddWithValue("@first", tbFirstName.Text);
         update.Parameters.AddWithValue("@last", tbLastName.Text);
@@ -134,11 +130,9 @@ namespace Final_Project
         update.Parameters.AddWithValue("@phone", tbPhone.Text);
         update.Parameters.AddWithValue("@ID", tbEmpId.Text);
 
-
         update.CommandText = "exec UpdateUser @first, @last, @line1, @line2, @city, @state, @zip, @phone, @ID";
         update.ExecuteNonQuery();
         save_connection.Close();
-
 
         //reconnect to database
         System.Data.SqlClient.SqlConnection save_connection2 = new System.Data.SqlClient.SqlConnection();
@@ -152,7 +146,6 @@ namespace Final_Project
         String month = DDLMonth.Text;
         String Year = DDLYear.Text;
 
-
         update2.Parameters.AddWithValue("@Credit", tbCardNum.Text);
         update2.Parameters.AddWithValue("@Month", month);
         update2.Parameters.AddWithValue("@Year", Year);
@@ -165,13 +158,26 @@ namespace Final_Project
 
         notify.Style.Remove("display");
         notify.InnerHtml = "Changes Saved Successfully";
-
       }
-
       catch
       {
         notify.InnerHtml = "Error";
       }
+    }
+
+    protected void tbAirlineRewards_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void tbHotelRewards_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void tbCarRewards_TextChanged(object sender, EventArgs e)
+    {
+
     }
   }
 }

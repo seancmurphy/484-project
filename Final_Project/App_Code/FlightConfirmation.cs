@@ -30,7 +30,7 @@ namespace Final_Project
     
     }
     
-    public FlightConfirmation(string fli, string fdi, string, fai
+    public FlightConfirmation(string fli, string fdi, string fai,
                               string fsi, string fci, string rfli,
                               string rfdi, string rfai, string rfsi,
                               string rfci)
