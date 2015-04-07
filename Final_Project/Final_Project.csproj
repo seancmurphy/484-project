@@ -212,6 +212,10 @@
     <Content Include="App_Code\QPXRequest.cs" />
     <Content Include="App_Code\QPXResponse.cs" />
     <Content Include="App_Code\User.cs" />
+    <Content Include="App_Code\FlightConfirmation.cs" />
+    <Content Include="App_Code\TrainConfirmation.cs" />
+    <Content Include="App_Code\HotelConfirmation.cs" />
+    <Content Include="App_Code\CarConfirmation.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">

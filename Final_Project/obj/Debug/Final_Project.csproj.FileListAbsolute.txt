@@ -101,3 +101,5 @@ E:\Final_Project\Final_Project\bin\Newtonsoft.Json.dll
 E:\Final_Project\Final_Project\bin\Newtonsoft.Json.xml
 \\vmware-host\Shared Folders\484-labs\Final_Project\Final_Project\bin\Newtonsoft.Json.dll
 \\vmware-host\Shared Folders\484-labs\Final_Project\Final_Project\bin\Newtonsoft.Json.xml
+C:\Users\Josh Crites\Documents\Projects\484-project\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+C:\Users\Josh Crites\Documents\Projects\484-project\Final_Project\obj\Debug\Final_Project.dll
