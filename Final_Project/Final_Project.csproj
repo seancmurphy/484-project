@@ -216,6 +216,7 @@
     <Content Include="App_Code\CarConfirmation.cs" />
     <Content Include="App_Code\CurrencyRate.cs" />
     <Compile Include="App_Code\Train.cs" />
+    <Compile Include="App_Code\Weather.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="Account\Login.aspx.cs">

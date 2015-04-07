@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Final_Project
 {
@@ -49,6 +52,49 @@ namespace Final_Project
     }
 
     // Behaviors
+    static private string createWeatherBlock(string city_input)
+    {
+      string city = city_input.Replace(" ", "_");
+      string url = @"http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=xml&units=imperial&cnt=5";
+      XmlDocument xmlDoc = new XmlDocument();
+      xmlDoc.Load(url);
+
+      var ser = new XmlSerializer(typeof(Weatherdata));
+      var obj = (Weatherdata)ser.Deserialize(new StringReader(xmlDoc.OuterXml));
+
+      string ugh = obj.Location.name + ", " + obj.Location.country;
+
+      string build = @"
+                      <table>
+                        <tr>
+                          <th>" + obj.Forecast.Time[0].Day + @"</th>
+                          <th>" + obj.Forecast.Time[1].Day + @"</th>
+                          <th>" + obj.Forecast.Time[2].Day + @"</th>
+                          <th>" + obj.Forecast.Time[3].Day + @"</th>
+                          <th>" + obj.Forecast.Time[4].Day + @"</th>
+                        </tr>
+                        <tr>
+                          <td>Low: " + obj.Forecast.Time[0].Temperature.Min + @"F</td>
+                          <td>Low: " + obj.Forecast.Time[1].Temperature.Min + @"F</td>
+                          <td>Low: " + obj.Forecast.Time[2].Temperature.Min + @"F</td>
+                          <td>Low: " + obj.Forecast.Time[3].Temperature.Min + @"F</td>
+                          <td>Low: " + obj.Forecast.Time[4].Temperature.Min + @"F</td>
+                        </tr>
+                        <tr>
+                          <td>High: " + obj.Forecast.Time[0].Temperature.Max + @"F</td>
+                          <td>High: " + obj.Forecast.Time[1].Temperature.Max + @"F</td>
+                          <td>High: " + obj.Forecast.Time[2].Temperature.Max + @"F</td>
+                          <td>High: " + obj.Forecast.Time[3].Temperature.Max + @"F</td>
+                          <td>High: " + obj.Forecast.Time[4].Temperature.Max + @"F</td>
+                        </tr>
+                      </table>
+                      ";
+    
+      string output = @"";
+
+      return output;
+    }
+
     static public void createFlightConfirmationMessage(string EmpID)
     {
       BaseMessage = @"
