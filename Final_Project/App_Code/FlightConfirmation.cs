@@ -24,89 +24,111 @@ namespace Final_Project
     private static string returnFlightStopsInfo = @"";
     private static string returnFlightClassInfo = @"";
 
-    // Constructor
+    // Constructors
+    public FlightConfirmation()
+    {
+    
+    }
+    
+    public FlightConfirmation(string fli, string fdi, string, fai
+                              string fsi, string fci, string rfli,
+                              string rfdi, string rfai, string rfsi,
+                              string rfci)
+    {
+      flightInfo = fli;
+      flightDepartInfo = fdi;
+      flightArriveInfo = fai;
+      flightStopsInfo = fsi;
+      flightClassInfo = fci;
+      
+      returnFlightInfo = rfli;
+      returnFlightDepartInfo = rfdi;
+      returnFlightArriveInfo = rfai;
+      returnFlightStopsInfo = rfsi;
+      returnFlightClassInfo = rfci;
+    }
 
     // Behaviors
     static public void createFlightConfirmationMessage(string EmpID)
     {
       BaseMessage = @"
-                          <!DOCTYPE html>
-                          <html>
-                            <head>
-                              <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"" />
-                              <title>Demystifying Email Design</title>
-                              <meta name=""viewport"" content=""width=device-width, initial-scale=1.0""/>
-                            </head>
-                            <body style=""font-family:sans-serif;width:980px;"">
-                              <img style=""display:block;margin:0 auto;width:980px;height:95px;"" src=""https://dl.dropboxusercontent.com/u/982704/banner.png"" />
-                              <br />
-                              <table>
-                                <tr>
-                                  <h3 style=""color:navy;"">Travel Confirmation</h3>
-                                </tr>
-                                <tr>
-                                  <span>Confirmation #: " + flightConfNum + @"</span>
-                                </tr>
-                                <tr>
-                                  <span>Employee ID: " + EmpID + @"</span>
-                                </tr>
-                              </table>
-                              <table>
-                                <tr>
-                                  <th>Air Itinerary</th>
-                                </tr>
-                                <tr>
-                                  <span style=""text-decoration:underline;"">Departure Flight</span>
-                                </tr>
-                                <tr>
-                                  <td><span>Flight/Equip: </span></td>
-                                  <td><span>" + flightInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Depart: </span></td>
-                                  <td><span>" + flightDepartInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Arrive: </span></td>
-                                  <td><span>" + flightArriveInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Stops: </span></td>
-                                  <td><span>" + flightStopsInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Class: </span></td>
-                                  <td><span>" + flightClassInfo + @"</span></td>
-                                </tr>
-                              </table>
-                              <table>
-                                <tr>
-                                  <span style=""text-decoration:underline;"">Return Flight</span>
-                                </tr>
-                                <tr>
-                                  <td><span>Flight/Equip: </span></td>
-                                  <td><span>" + returnFlightInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Depart: </span></td>
-                                  <td><span>" + returnFlightDepartInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Arrive: </span></td>
-                                  <td><span>" + returnFlightArriveInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Stops: </span></td>
-                                  <td><span>" + returnFlightStopsInfo + @"</span></td>
-                                </tr>
-                                <tr>
-                                  <td><span>Class: </span></td>
-                                  <td><span>" + returnFlightClassInfo + @"</span></td>
-                                </tr>
-                              </table>
-                            </body>
-                          </html>
-                          ";
+                    <!DOCTYPE html>
+                    <html>
+                      <head>
+                        <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"" />
+                        <title>Demystifying Email Design</title>
+                        <meta name=""viewport"" content=""width=device-width, initial-scale=1.0""/>
+                      </head>
+                      <body style=""font-family:sans-serif;width:980px;"">
+                        <img style=""display:block;margin:0 auto;width:980px;height:95px;"" src=""https://dl.dropboxusercontent.com/u/982704/banner.png"" />
+                        <br />
+                        <table>
+                          <tr>
+                            <h3 style=""color:navy;"">Travel Confirmation</h3>
+                          </tr>
+                          <tr>
+                            <span>Confirmation #: " + flightConfNum + @"</span>
+                          </tr>
+                          <tr>
+                            <span>Employee ID: " + EmpID + @"</span>
+                          </tr>
+                        </table>
+                        <table>
+                          <tr>
+                            <th>Air Itinerary</th>
+                          </tr>
+                          <tr>
+                            <span style=""text-decoration:underline;"">Departure Flight</span>
+                          </tr>
+                          <tr>
+                            <td><span>Flight/Equip: </span></td>
+                            <td><span>" + flightInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Depart: </span></td>
+                            <td><span>" + flightDepartInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Arrive: </span></td>
+                            <td><span>" + flightArriveInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Stops: </span></td>
+                            <td><span>" + flightStopsInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Class: </span></td>
+                            <td><span>" + flightClassInfo + @"</span></td>
+                          </tr>
+                        </table>
+                        <table>
+                          <tr>
+                            <span style=""text-decoration:underline;"">Return Flight</span>
+                          </tr>
+                          <tr>
+                            <td><span>Flight/Equip: </span></td>
+                            <td><span>" + returnFlightInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Depart: </span></td>
+                            <td><span>" + returnFlightDepartInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Arrive: </span></td>
+                            <td><span>" + returnFlightArriveInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Stops: </span></td>
+                            <td><span>" + returnFlightStopsInfo + @"</span></td>
+                          </tr>
+                          <tr>
+                            <td><span>Class: </span></td>
+                            <td><span>" + returnFlightClassInfo + @"</span></td>
+                          </tr>
+                        </table>
+                      </body>
+                    </html>
+                    ";
     }
 
     // Get Methods
